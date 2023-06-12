@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% load sass_tags %}
+    <link href="{% sass_src 'style.scss' %}" rel="stylesheet" type="text/css" />
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Raleway">  
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" crossorigin=""></script>
+
+    {% load bootstrap5 %}
+    <!-- {% bootstrap_css %} -->
+    {% bootstrap_javascript %}
+
+</head>
+<body>
+  <header class="position-absolute container-fluid p-4 zindex-100">
+    <div class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Accueil</a></li>
+        <!-- <li class="nav-item"><a href="/prestations" class="nav-link">Prestations</a></li> -->
+        <li class="nav-item"><a href="/realisations" class="nav-link">Exemple</a></li>
+        <li class="nav-item"><a href="/tarifs" class="nav-link">Tarifs</a></li>
+        <!-- <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li> -->
+      </ul>
+    </div>
+  </header>
+  <div class="container-fluid p-0">
+      {% block content %}
+      {% endblock %}
+  </div>
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Accueil</a></li>
+        <li class="nav-item"><a href="/contact" class="nav-link px-2 text-body-secondary">Contactez-nous</a></li>
+        <li class="nav-item"><a href="/apropos" class="nav-link px-2 text-body-secondary">A propos</a></li>
+      </ul> -->
+      <p class="text-center text-body-secondary">© 2023 Epsiware</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="vh-40 container-fluid position-relative p-0"">
+    <div class="vh-40 position-absolute top-50 start-50 translate-middle zindex-10">
+        <div class="vh-40 d-flex align-items-center ">
+            <div class="text-center text-white">
+                <h1> Exemple </h1>
+            </div>
+        </div> 
+    </div>
+
+    <div class="vh-40 d-flex flex-column align-items-center vh-100 text-white zindex-1 {{css_img}}">
+        <center>
+        <video id="background-video" class='vh-40' autoplay loop muted>
+            <source src="{% static 'video/eglise.mp4' %}" type="video/mp4">    
+        </video>
+    </center>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+
+        {%for exemple in list_exemples%}
+        
+        {%if forloop.counter|divisibleby:2 %}
+        <div class="col-12 py-5">
+            <div class="card mb-3">
+                <div class="row g-0">
+                <div class="col-md-6 text-end">
+                    <div class="card-body position-relative top-50 start-50 translate-middle">
+                    <h2>{{exemple.title}}</h2>
+                    <p class="card-text">{{exemple.text}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static exemple.img %}" class="img-fluid img-cover rounded-end" alt="aerial picture of house from drone">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="col-12 py-5">
+            <div class="card mb-3">
+                <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="{% static exemple.img %}" class="img-fluid img-cover rounded-start" alt="aerial photo of house take with dji drone">
+                </div>
+                <div class="col-md-6 text-start">
+                    <div class="card-body position-relative top-50 start-50 translate-middle">
+                    <h2>{{exemple.title}}</h2>
+                    <p class="card-text">{{exemple.text}}</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    <div class="container text-center py-5">
+        <div class="text-center">
+            <button type="button" class="btn btn-outline-primary btn-lg px-5">Contactez-nous</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

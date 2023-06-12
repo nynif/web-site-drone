@@ -1,0 +1,97 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include "block/cover_onepage.html" with css_img="bg-img-home" main_title="Votre gite en vidéo" main_text="Prise de vue photo/vidéo aérienne de votre résidence" %}
+
+<div class="d-flex flex-column align-items-center bg-white p-5 border-bottom">
+    <div class="text-center w-50 m-5">
+        <h1>Pilote de drone professionnel </h1>
+        <p class="p">
+            Confiez la prise de vue de votre résidence à un pilote de drone professionnel pour des images aériennes de qualité supérieure. Mettez en valeur votre propriété sous un nouvel angle et offrez une visite immersive à vos potentiels acheteurs ou locataires. Découvrez comment notre service de pilote de drone professionnel peut sublimer votre propriété dès maintenant.
+        </p>
+    </div>
+</div>
+
+<div class="justify-content-center p-5 m-5 text-center">
+    <div class="row">
+        <div class="col-3"> 
+            <div class="card">
+                <img src="{% static 'img/villa.jpg' %}" alt="aerial view of villa from drone" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
+                    <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-9 px-5 align-self-center text-start">
+            <h2>Booster les réservations de votre résidence de vacances</h2>
+            <p>Les photos traditionnelles ne suffisent plus pour attirer des clients à votre résidence de vacances. Les voyageurs d'aujourd'hui sont à la recherche d'expériences uniques et mémorables. Les vidéos prises en drone offrent une vue aérienne époustouflante de votre propriété, mettant en valeur ses caractéristiques uniques et donnant une idée précise de l'emplacement et de l'environnement. En montrant les paysages alentours, les commodités et les attractions, les vidéos prises en drone peuvent aider à stimuler l'imagination des clients et à les encourager à réserver votre résidence de vacances.</p>
+        </div>
+    </div>
+</div>
+
+<div class="justify-content-center p-5 m-5 text-center">
+    <div class="row">
+        <div class="col-9 px-5 align-self-center text-end">
+            <h2>Sortez du lot</h2>
+            <p> Les vidéos prises en drone permettent de donner une idée précise de la taille, de la forme et de la disposition de votre propriété. En montrant les caractéristiques uniques de votre résidence de vacances, telles que les jardins, les terrasses, les piscines ou les vues panoramiques, les vidéos prises en drone peuvent aider les clients à se projeter dans leur futur séjour. Les vidéos prises en drone sont également idéales pour montrer l'environnement, tels que les plages, les montagnes ou les parcs nationaux, permettant aux clients de voir ce qui les entoure.</p>
+        </div>
+        <div class="col-3"> 
+            <div class="card">
+                <img src="{% static 'img/villa_plage2.jpg' %}" alt="aerial view of a beach from drone" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
+                    <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="justify-content-center p-5 m-5 text-center">
+    <div class="row">
+        <div class="col-3"> 
+            <div class="card">
+                <img src="{% static 'img/ville.jpg' %}" alt="aerial view of a town from drone" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
+                    <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-9 px-5 align-self-center text-start">
+            <h2>Ne laissez pas votre résidence de vacances se perdre dans la foule.</h2>
+            <p> Les plateformes de location de vacances sont inondées de milliers de propriétés, chacune cherchant à attirer l'attention des voyageurs. Les photos de qualité médiocre ou peu inspirantes peuvent rapidement faire disparaître votre propriété dans la masse. Les vidéos prises en drone peuvent aider à attirer l'attention des clients potentiels en offrant une perspective unique sur votre résidence de vacances.</p>
+        </div>
+    </div>
+</div>
+
+<div class="justify-content-center p-5 m-5 text-center">
+    <div class="row">
+        <div class="col-9 px-5 align-self-center text-end">
+            <h2>Offrez une expérience immersive à vos clients avant leur arrivée.</h2>
+            <p> Les vidéos prises en drone peuvent aider les clients à se sentir plus confiants dans leur choix de réservation. Les vidéos aériennes leur permettent de visualiser votre propriété avant leur arrivée, ce qui leur donne une meilleure idée de l'emplacement, des équipements et des attractions environnantes. Les clients peuvent également mieux comprendre la disposition de votre propriété et planifier leur séjour en conséquence..</p>
+        </div>
+        <div class="col-3"> 
+            <div class="card">
+                <img src="{% static 'img/piscine.jpg' %}" alt="aerial swimming pool of villa from drone" class="card-img">
+                <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
+                    <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container text-center py-5">
+    <br>
+    <div class="text-center">
+        <button type="button" class="btn btn-outline-primary btn-lg px-5">Contactez-nous</button>
+    </div>
+    <br><br><br>
+</div>
+
+<div id="map" class="vh-40"></div>
+<script src="{% static 'map.js' %}" defer></script>
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="vh-40 container-fluid position-relative p-0"">
+    <div class="vh-40 position-absolute top-50 start-50 translate-middle zindex-10">
+        <div class="vh-40 d-flex align-items-center ">
+            <div class="text-center text-white">
+                <h1> {{main_title}} </h1>
+                <!-- <br> -->
+                <!-- <button type="button" class="btn btn-outline-light btn-lg px-5">Contactez-nous</button> -->
+            </div>
+        </div> 
+    </div>
+
+    <div class="vh-40 d-flex flex-column align-items-center vh-100 text-white zindex-1 {{css_img}}">
+        <video id="background-video" class='vh-40' autoplay loop muted>
+            <source src="{% static 'video/plage.mov' %}" type="video/mp4">    
+        </video>
+    </div>
+</div>
+
+
+
