@@ -1,0 +1,174 @@
+// From https://getbootstrap.com/docs/5.0/customize/sass/#maps-and-loops
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$primary: #77B5FE;
+$secondary: #E7FF5E;
+$success: #4277B3;
+$info: #A3B34B;
+$warning: #FF9A91;
+// $danger: #FE7D77;
+$light: #ddf4ff;
+$dark: #1E2E40;
+
+
+@import './bootstrap/bootstrap';
+
+body {
+    font-family: 'Raleway', serif; 
+}
+
+.zindex-1 {
+    z-index: 1;
+}
+.zindex-10 {
+    z-index: 10;
+}
+.zindex-100 {
+    z-index: 100;
+}
+
+header a{
+    text-transform: uppercase;
+    font-family: 'Raleway', serif; 
+    font-size: 1rem !important;
+    color: white !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.2em;  
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+p{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: $dark
+}
+
+.no-filter{
+    filter: brightness(1);
+}
+
+.baniere-img-home{
+    /* The image used */
+    background-image: url("/static/img/drone3.jpg");
+
+    /* Full height */
+    height: 50%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    filter: brightness(0.4);
+}
+
+
+.img_filter_brigh{
+    filter: brightness(0.6);   
+}
+.vh-50{
+    height: 50vh !important;
+}
+.vh-40{
+    height: 40vh !important;
+}
+
+.start-25{
+    left: 25%
+}
+
+.mt-400{
+    margin-top: 400px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+  }
+
+.img-cover{
+    object-fit: cover;
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+
+// PRICE PAGE 
+
+
+  .bi {
+    color:#00C9FF;
+  }
+
+  .price {
+    color:white;
+    font-size: 100px;
+    font-weight: 800;
+    padding-top:-80% !important;
+  }
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: $primary;
+    color: white;
+    height: auto;
+    padding:50px 0px;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    padding:50px 0px;
+  }

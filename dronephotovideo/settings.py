@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-s&yw&ov_$9)pyd(r(y3o&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS = ['drone-photovideo.fr']
+ALLOWED_HOSTS = ['45.9.190.30', 'drone-photovideo.fr']
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
