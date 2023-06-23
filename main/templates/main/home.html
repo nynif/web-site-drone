@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-3"> 
             <div class="card">
-                <img src="{% static 'img/villa.jpg' %}" alt="aerial view of villa from drone" class="card-img">
+                <img data-src="{% static 'img/villa.jpg' %}" alt="aerial view of villa from drone" class="card-img lazyload">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
                     <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
                 </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-3"> 
             <div class="card">
-                <img src="{% static 'img/villa_plage2.jpg' %}" alt="aerial view of a beach from drone" class="card-img">
+                <img data-src="{% static 'img/villa_plage2.jpg' %}" alt="aerial view of a beach from drone" class="card-img lazyload">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
                     <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
                 </div>
@@ -52,7 +52,7 @@
     <div class="row">
         <div class="col-3"> 
             <div class="card">
-                <img src="{% static 'img/ville.jpg' %}" alt="aerial view of a town from drone" class="card-img">
+                <img data-src="{% static 'img/ville.jpg' %}" alt="aerial view of a town from drone" class="card-img lazyload">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
                     <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
                 </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="col-3"> 
             <div class="card">
-                <img src="{% static 'img/piscine.jpg' %}" alt="aerial swimming pool of villa from drone" class="card-img">
+                <img src="{% static 'img/piscine.jpg' %}" alt="aerial swimming pool of villa from drone" class="card-img lazyload">
                 <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column text-center text-white">
                     <!-- <h2>Booster les réservations de votre résidence de vacances</h3> -->
                 </div>
@@ -91,7 +91,8 @@
 </div>
 
 <div id="map" class="vh-40"></div>
-<script src="{% static 'map.js' %}" defer></script>
+<div data-script="{% static 'map.js' %}" class="lazyload">
+
 
 
 {% endblock %}
