@@ -18,42 +18,41 @@
     </div>
 </div>
 
-<div class="container py-5">
+<div class="container py-sm-5">
     <div class="row">
 
         {%for exemple in list_exemples%}
         
         {%if forloop.counter|divisibleby:2 %}
-        <div class="col-12 py-5">
-            <div class="card mb-3">
+        <div class="col-12 p-3 py-sm-5 g-0">
+            <div class="card mx-3 m-sm-3">
                 <div class="row g-0">
-                <div class="col-md-6 text-end">
-                    <div class="card-body position-relative top-50 start-50 translate-middle">
-                    <h2>{{exemple.title}}</h2>
-                    <p class="card-text">{{exemple.text}}</p>
+                    <div class="col-md-6">
+                        <img data-src="{% static exemple.img %}" class="lazyload img-fluid img-cover rounded-start" alt="aerial photo of house take with dji drone">
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <img data-src="{% static exemple.img %}" class="lazyload img-fluid img-cover rounded-end" alt="aerial picture of house from drone">
-                </div>
+                    <div class="col-md-6">
+                        <div class="card-body position-relative top-50 start-50 translate-middle">
+                            <h2 class="text-center">{{exemple.title}}</h2>
+                            <p class="text-start card-text">{{exemple.text}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+    
         {% else %}
-        <div class="col-12 py-5">
-            <div class="card mb-3">
+        <div class="col-12 p-3 py-sm-5 g-0">
+            <div class="card mx-3 m-sm-3">
                 <div class="row g-0">
-                <div class="col-md-6">
-                    <img data-src="{% static exemple.img %}" class="lazyload img-fluid img-cover rounded-start" alt="aerial photo of house take with dji drone">
-                </div>
-                <div class="col-md-6 text-start">
-                    <div class="card-body position-relative top-50 start-50 translate-middle">
-                    <h2>{{exemple.title}}</h2>
-                    <p class="card-text">{{exemple.text}}</p>
+                    <div class="col-md-6">
+                        <div class="card-body position-relative top-50 start-50 translate-middle">
+                            <h2 class="text-center">{{exemple.title}}</h2>
+                            <p class="text-end card-text">{{exemple.text}}</p>
+                        </div>
                     </div>
-                </div>
-
+                    <div class="col-md-6">
+                        <img data-src="{% static exemple.img %}" class="lazyload img-fluid img-cover rounded-end" alt="aerial picture of house from drone">
+                    </div>
                 </div>
             </div>
         </div>
