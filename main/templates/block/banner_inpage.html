@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <div class="vh-40 container-fluid position-relative p-0"">
     <div class="vh-40 position-absolute top-50 start-50 translate-middle zindex-10">
         <div class="vh-40 d-flex align-items-center ">
@@ -11,9 +12,9 @@
         </div> 
     </div>
 
-    <div class="vh-40 d-flex flex-column align-items-center vh-40 text-white zindex-1 {{css_img}}">
-        <video class="lazyload" id="background-video" class='vh-40' data-autoplay="" loop muted>
-            <source src="{% static video %}" type="video/mp4">    
+    <div class="vh-40 d-flex flex-column align-items-center text-white zindex-1 {{css_img}}">
+        <video class="vh-40 lazyload" preload="none" id="background-video" data-autoplay="" muted playsinline loop poster="{% static postername %}">
+            <source type="video/mp4" src="{% static video %}">    
         </video>
     </div>
 </div>

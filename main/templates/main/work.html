@@ -3,9 +3,10 @@
 
 {% block content %}
 
+{% include "block/banner_inpage.html" with css_img="bg-img-home" main_title="Exemples" video='video/eglise.mp4' postername="video/poster_eglise.jpg" %}
 
 
-<div class="vh-40 container-fluid position-relative p-0"">
+<!-- <div class="vh-40 container-fluid position-relative p-0"">
     <div class="vh-40 position-absolute top-50 start-50 translate-middle zindex-10">
         <div class="vh-40 d-flex align-items-center ">
             <div class="text-center text-white">
@@ -19,7 +20,7 @@
             <source src="{% static 'video/eglise.mp4' %}" type="video/mp4">    
         </video>
     </div>
-</div>
+</div> -->
 
 <div class="container py-sm-5">
     <div class="row">

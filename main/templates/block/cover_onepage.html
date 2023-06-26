@@ -13,8 +13,8 @@
     </div>
 
     <div class="d-flex flex-column align-items-center vh-coverfull text-white zindex-1">
-        <video class="lazyload" preload="none" id="background-video" data-autoplay="" muted loop>
-            <source src="{% static videoname %}" type="video/mp4">    
+        <video class="lazyload" preload="none" id="background-video" data-autoplay="" muted playsinline loop poster="{% static postername %}">
+            <source type="video/mp4" src="{% static videoname %}">    
         </video>
     </div>
 </div>

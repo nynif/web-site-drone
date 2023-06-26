@@ -31,7 +31,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.envfile'))
 
 
 SECRET_KEY = env.str('SECRET_KEY', default='django-insecure-s&yw&ov_$9)pyd(r(y3o&rsr_xalra4i^tz3ab6r48&his3a0=')
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = env.bool('DEBUG', default=True)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1'])
 
