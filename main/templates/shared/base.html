@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% load static %}
+  {% load sass_tags %}
+  {% load bootstrap5 %}
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2NGXSWC83"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E2NGXSWC83');
+  </script>
 
 
+  <!-- SEO -->
     <title>Vidéo et Photo Aérienne par Drone en Région Sud PACA - Sublimer votre propriété</title>
     <meta name="description" content="Offrez une perspective unique à votre gîte ou villa avec nos services de vidéo et de photo par drone en région Sud Paca. Rendez votre propriété encore plus charmante et attrayante." />
 
-    {% load sass_tags %}
-    <link href="{% sass_src 'style.scss' %}" rel="stylesheet" type="text/css" />
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Raleway">  
     <link rel="canonical" href="https://drone-photovideo.fr" />
     <link rel="alternate" href="https://drone-photovideo.fr" hreflang="fr" />
 
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
+    <link href="{% sass_src 'style.scss' %}" rel="stylesheet" type="text/css" />
+    {% bootstrap_css %}
+
+    <!-- JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js" crossorigin=""></script>
 
-    {% load static %}
     <script src="{% static 'js/lazysizes.min.js' %} " async=""></script>
     <script src="{% static 'js/ls.unveilhooks.min.js' %} " async=""></script>
-
-    {% load bootstrap5 %}
-    <!-- {% bootstrap_css %} -->
+    <script src="{% static 'js/script.js' %} " async=""></script>
     {% bootstrap_javascript %}
+
+    
 
 </head>
 <body>
@@ -39,6 +59,19 @@
       </ul>
     </div>
   </header>
+
+  <!-- Modal contact (shared) -->
+  <div id="modal-contact" class="modal">
+
+    <!-- Modal content -->
+    <div class="container modal-content p-5">
+      <span class="close">&times;</span>
+      <h1>Contactez-nous</h1>
+      <p>drone.photovideo.pro@gmail.com</p>
+    </div>
+
+  </div>
+
   <div class="container-fluid p-0">
       {% block content %}
       {% endblock %}

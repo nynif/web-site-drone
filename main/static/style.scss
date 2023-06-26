@@ -11,6 +11,7 @@ $info: #A3B34B;
 $warning: #FF9A91;
 // $danger: #FE7D77;
 $light: #ddf4ff;
+$light2: #abe5ff;
 $dark: #1E2E40;
 
 
@@ -48,7 +49,8 @@ h1{
 // }
 
 h3{
-    font-size: 1.2rem;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 
@@ -180,7 +182,48 @@ h3{
   }
 
 
-  // Specific rules for destop (mobile first)
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 12px;
+  top: 0px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+// Specific rules for destop (mobile first)
 @media (min-width: 576px) {  
 
   header a{
