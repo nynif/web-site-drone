@@ -12,21 +12,28 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+env = environ.Env()
+
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.envfile'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-s&yw&ov_$9)pyd(r(y3o&rsr_xalra4i^tz3ab6r48&his3a0=')
+# SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-s&yw&ov_$9)pyd(r(y3o&rsr_xalra4i^tz3ab6r48&his3a0=')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
 
-ALLOWED_HOSTS = ['45.9.190.30', 'drone-photovideo.fr', '127.0.0.1']
+SECRET_KEY = env.str('SECRET_KEY', default='django-insecure-s&yw&ov_$9)pyd(r(y3o&rsr_xalra4i^tz3ab6r48&his3a0=')
+DEBUG = env.bool('DEBUG', default=False)
+
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1'])
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
