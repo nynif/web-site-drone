@@ -4,15 +4,15 @@
 {% block content %}
 
 {% with main_text='Prise de vue photo/vidéo aérienne de votre résidence' %}
-{% include "block/cover_onepage.html" with videoname='video/montage_villa.mp4' main_title="Votre gite en vidéo" main_text=main_text %}
+{% include "block/cover_onepage.html" with videoname='video/montage_villa.mp4' main_title="Vidéos drone pour gîtes en région PACA" main_text=main_text %}
 {% endwith %}
 
 <div class="container-sm d-flex flex-column align-items-center bg-white p-5"> 
     <div class="row justify-content-center">
         <div class="col-sm-10 text-center">
-            <h1>Pilote de drone professionnel </h1>
+            <h2>Pilote de drone professionnel </h2>
             <p class="p">
-                Confiez la prise de vue de votre résidence à un pilote de drone professionnel pour des images aériennes de qualité supérieure. Mettez en valeur votre propriété sous un nouvel angle et offrez une visite immersive à vos potentiels acheteurs ou locataires. Découvrez comment notre service de pilote de drone professionnel peut sublimer votre propriété dès maintenant.
+                Confiez la mise en lumière de votre gîte ou villa en Région Sud Paca, à un pilote de drone professionnel basé entre Marseille et Aix-en-Provence. Profitez d'images aériennes d'une qualité exceptionnelle qui sauront valoriser votre propriété sous une perspective innovante. Offrez une expérience immersive à vos potentiels acquéreurs ou locataires grâce à notre expertise en vidéographie par drone. Découvrez dès aujourd'hui comment notre service de pilote de drone professionnel peut sublimer votre propriété.
             </p>
         </div>
     </div>
@@ -46,4 +46,29 @@
 <div id="map" class="vh-40"></div>
 <div data-script="{% static 'map.js' %}" class="lazyload">
 
+<div class="text-center p-4 p-sm-5">
+        <h2> Votre gîte vu du ciel en PACA</h2>
+        <div class="row">
+            <div class="col-sm-4 my-3">
+                <h3>Capturer l'essence de votre gîte ou villa</h3>
+                <p class="p">
+                    Dans une région aussi pittoresque, il est crucial de capturer l'essence et le charme de votre gîte ou villa de la manière la plus impressionnante possible. Les vidéos et photos par drone permettent de sublimer votre propriété en offrant des vues aériennes à couper le souffle, inaccessibles par des moyens traditionnels.
+                </p>    
+            </div>
+            <div class="col-sm-4">
+                <h3>Une perspective unique sur votre propriété</h3>
+                <p class="p">
+                    Basés entre Marseille et Aix-en-Provence, nous sommes experts en vidéographie et photographie aérienne par drone. Nos services professionnels mettent en valeur les plus belles caractéristiques de votre gîte ou villa, offrant ainsi une perspective unique qui séduira à coup sûr vos potentiels locataires ou acheteurs.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Les paysages de la region sud sublimés par nos drones professionnels</h3>
+                <p class="p">
+                    La Région Sud Paca, avec ses paysages diversifiés et ses sites d'exception, est le cadre parfait pour la réalisation de vidéos et photos par drone. Les prises de vue aériennes capturées par nos drones professionnels mettent en scène votre propriété dans son contexte régional, ce qui est un véritable atout pour sa promotion. 
+                </p>
+            </div>
+        </div>
+</div>
+
+    
 {% endblock %}
