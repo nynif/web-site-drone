@@ -149,14 +149,13 @@ h3{
     transform-style: preserve-3d;
   }
 
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+  /* Do an horizontal flip when you move the mouse over the flip box container, active for mobile (because there is no hover on mobile */
+  .flip-card:hover .flip-card-inner, .flip-card:active .flip-card-inner {
     transform: rotateY(180deg);
   }
 
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
-    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
@@ -169,6 +168,7 @@ h3{
     color: white;
     height: auto;
     padding:50px 0px;
+    position: absolute;
   }
 
   /* Style the back side */
