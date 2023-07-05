@@ -9,6 +9,8 @@
   {% load sass_tags %}
   {% load bootstrap5 %}
 
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" >
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2NGXSWC83"></script>
   <script>
@@ -21,13 +23,55 @@
 
 
   <!-- SEO -->
-    <title>Vidéo et Photo Aérienne par Drone en Région Sud PACA - Sublimer votre propriété</title>
-    <meta name="description" content="Offrez une perspective unique à votre gîte ou villa avec nos services de vidéo et de photo par drone en région Sud Paca. Rendez votre propriété encore plus charmante et attrayante." />
+    <title>Vidéo et photo aérienne par drone en Région Sud PACA </title>
+    <meta name="description" content="Offrez une perspective unique à votre gîte ou villa avec nos prestations de vidéo par drone en région Sud Paca. Rendez votre propriété attrayante." />
 
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Raleway">  
     <link rel="canonical" href="https://drone-photovideo.fr" />
     <link rel="alternate" href="https://drone-photovideo.fr" hreflang="fr" />
-
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Vidéo drone",
+        "image": [
+          "https://drone-photovideo.fr/static/img/villa.jpg",
+          "https://drone-photovideo.fr/static/img/piscine.jpg",
+          "https://drone-photovideo.fr/static/img/ex_villa.jpg"
+         ],
+        "description": "Vidéo de 30 secondes",
+        "brand": {
+          "@type": "Brand",
+          "name": "Epsiware"
+        },
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Marc Zapa"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "reviewCount": 9
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://drone-photovideo.fr/tarifs/",
+          "priceCurrency": "EUR",
+          "price": 390,
+          "priceValidUntil": "2023-07-01",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+      </script>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
@@ -48,7 +92,7 @@
 
 </head>
 <body>
-  <header class="position-absolute container-fluid p-4 zindex-100">
+  <header id="top" class="position-absolute container-fluid p-4 zindex-100">
     <div class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Accueil</a></li>
@@ -66,7 +110,7 @@
     <!-- Modal content -->
     <div class="container modal-content p-5">
       <span class="close">&times;</span>
-      <h1>Contactez-nous</h1>
+      <h3>Contactez-nous</h3>
       <p>drone.photovideo.pro@gmail.com</p>
     </div>
 
@@ -84,7 +128,7 @@
         <li class="nav-item"><a href="/contact" class="nav-link px-2 text-body-secondary">Contactez-nous</a></li>
         <li class="nav-item"><a href="/apropos" class="nav-link px-2 text-body-secondary">A propos</a></li>
       </ul> -->
-      <p class="text-center text-body-secondary">© 2023 Epsiware</p>
+      <p class="text-center text-body-secondary">© 2023 Epsiware <a style="text-decoration: none" href="#top">🔝🔝</a> </p>
     </footer>
   </div>
 </body>
