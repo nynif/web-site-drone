@@ -11,6 +11,12 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
+
+  gtag('event', 'click_on_contact', {
+    'app_name': 'paca',
+    'screen_name': 'any'
+  });
+  
   modal.style.display = "block";
 }
 
