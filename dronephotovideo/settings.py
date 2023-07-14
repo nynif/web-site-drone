@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'bootstrap5',
     'sass_processor'
 ]
 
@@ -143,13 +142,6 @@ STATICFILES_DIRS = [
 
 ## Django Sass
 SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
-
-# Default settings
-BOOTSTRAP5 = {
-    "css_url": {
-        "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
-    }
-}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
