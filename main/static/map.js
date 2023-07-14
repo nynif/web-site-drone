@@ -1,3 +1,7 @@
+var lat = document.getElementById("map").getAttribute('lat');
+var lng = document.getElementById("map").getAttribute('lng');
+console.log(lat)
+
 const copy = "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>";
 const url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const layer = L.tileLayer(url, { attribution: copy }).on('tileload', function(e) {
@@ -6,7 +10,7 @@ const layer = L.tileLayer(url, { attribution: copy }).on('tileload', function(e)
 
 const map = L.map("map", { 
     layers: [layer],
-    center: [43.297559, 5.391289],
+    center: [lat, lng],
     zoom: 4,
     zoomControl: false,
     scrollWheelZoom: false,
@@ -14,5 +18,5 @@ const map = L.map("map", {
     // doubleClickZoom: false,
 });
 
-map.panTo([43.297559, 5.391289], 4)
-map.flyTo([43.297559, 5.391289], 9)
+map.panTo([lat, lng], 4)
+map.flyTo([lat, lng], 9)

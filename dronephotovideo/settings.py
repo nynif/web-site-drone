@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 
 # Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, '.envfile'))
+environ.Env.read_env(os.path.join(BASE_DIR, 'custom/.envfile'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'bootstrap5',
-    'sass_processor',
+    'sass_processor'
 ]
 
 MIDDLEWARE = [
@@ -132,8 +132,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = 'static'
 STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     'sass_processor.finders.CssFinder',
+]
+
+STATICFILES_DIRS = [
+    BASE_DIR / "custom/static",
 ]
 
 ## Django Sass

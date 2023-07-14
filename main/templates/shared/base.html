@@ -8,6 +8,7 @@
   {% load static %}
   {% load sass_tags %}
   {% load bootstrap5 %}
+  {% load custom_tags %}
 
   <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" >
 
@@ -16,24 +17,25 @@
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-M8JDW2T');</script>
+      })(window,document,'script','dataLayer',"{% custom_json 'settings.googletagmanager' %}");</script>
       <!-- End Google Tag Manager -->
+     
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2NGXSWC83"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={% custom_json 'settings.gtag' %}"></script>
   
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-E2NGXSWC83');
+    gtag('config', "{% custom_json 'settings.gtag' %}");
   </script>
 
 
   <!-- SEO -->
-    <title>Vidéo et photo aérienne par drone en Région Sud PACA </title>
-    <meta name="description" content="Offrez une perspective unique à votre gîte ou villa avec nos prestations de vidéo par drone en région Sud Paca. Rendez votre propriété attrayante." />
+    <title> {% custom_json 'settings.meta_title' %} </title>
+    <meta name="description" content="{% custom_json 'settings.meta_description' %}" />
 
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Raleway">  
     <link rel="canonical" href="https://drone-photovideo.fr" />
@@ -102,7 +104,7 @@
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8JDW2T"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={% custom_json 'settings.googletagmanager' %}"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   

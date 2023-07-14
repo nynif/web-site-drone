@@ -8,7 +8,7 @@ urlpatterns = [
     path("realisations/", views.work, name="work"),
     path("tarifs/", views.price, name="price"),
     # path("blog/", views.blog, name="blog"),
-    path("apropos/", views.about, name="about"),
-    path("contact/", views.contact, name="contact"),
-    path("template/", views.template, name="template"),
+    # path("apropos/", views.about, name="about"),
+    # path("contact/", views.contact, name="contact"),
+    # path("template/", views.template, name="template"),
 ]

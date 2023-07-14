@@ -13,4 +13,6 @@ media
 .env 
 .envfile
 
+/custom 
+
 .DS_Store

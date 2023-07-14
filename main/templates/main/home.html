@@ -4,58 +4,60 @@
 {% block content %}
 
 {% with main_text='Prise de vue photo/vidéo aérienne de votre résidence' %}
-{% include "block/cover_onepage.html" with videoname='video/montage_villa.mp4' postername="video/poster_montage_villa.jpg" main_title="Vidéos drone pour gîtes en région PACA" main_text=main_text %}
+{% include "block/cover_onepage.html" with videoname='video/home_0_video.mp4' postername="video/home_0_video.jpg" main_title=home.0_big_title main_text=home.0_sub_big_title %}
 {% endwith %}
+
+{% load custom_tags %}
 
 <div class="container-sm d-flex flex-column align-items-center bg-white p-5"> 
     <div class="row justify-content-center">
         <div class="col-sm-10 text-center">
-            <h2>Pilote de drone professionnel </h2>
+            <h2> {{home.1_title}} </h2>
             <p class="p">
-                Confiez la mise en lumière de votre gîte ou villa en Région Sud Paca, à un pilote de drone professionnel basé entre Marseille et Aix-en-Provence. Profitez d'images aériennes d'une qualité exceptionnelle qui sauront valoriser votre propriété sous une perspective innovante. Offrez une expérience immersive à vos potentiels acquéreurs ou locataires grâce à notre expertise en vidéographie par drone. Découvrez dès aujourd'hui comment notre service de pilote de drone professionnel peut sublimer votre propriété.
+                {{home.1_paragraphe}}
             </p>
         </div>
     </div>
 </div>
 
-{% with title="Booster les réservations de votre résidence de vacances"  p="Les photos traditionnelles ne suffisent plus pour attirer des clients à votre résidence de vacances. Les voyageurs d'aujourd'hui sont à la recherche d'expériences uniques et mémorables. Les vidéos prises en drone offrent une vue aérienne époustouflante de votre propriété, mettant en valeur ses caractéristiques uniques et donnant une idée précise de l'emplacement et de l'environnement. En montrant les paysages alentours, les commodités et les attractions, les vidéos prises en drone peuvent aider à stimuler l'imagination des clients et à les encourager à réserver votre résidence de vacances." %}
-{% include "block/img_next_to_p.html" with left="true" p=p title=title img="img/villa.jpg" img_alt="aerial view of villa from drone" %} 
+{% with title=home.2_1_title p=home.2_1_paragraphe %}
+{% include "block/img_next_to_p.html" with left="true" p=p title=title img="img/home_2_1.jpg" img_alt="aerial view from drone" %} 
 {% endwith %}
 
-{% with title="Sortez du lot"  p="Les vidéos prises en drone permettent de donner une idée précise de la taille, de la forme et de la disposition de votre propriété. En montrant les caractéristiques uniques de votre résidence de vacances, telles que les jardins, les terrasses, les piscines ou les vues panoramiques, les vidéos prises en drone peuvent aider les clients à se projeter dans leur futur séjour. Les vidéos prises en drone sont également idéales pour montrer l'environnement, tels que les plages, les montagnes ou les parcs nationaux, permettant aux clients de voir ce qui les entoure." %}
-{% include "block/img_next_to_p.html" with right="true" p=p title=title img="img/villa_plage2.jpg" img_alt="aerial view of a beach from drone" %} 
+{% with title=home.2_2_title p=home.2_2_paragraphe %}
+{% include "block/img_next_to_p.html" with right="true" p=p title=title img="img/home_2_2.jpg" img_alt="aerial view from drone" %} 
 {% endwith %}
 
-{% with title="Ne laissez pas votre résidence de vacances se perdre dans la foule."  p=" Les plateformes de location de vacances sont inondées de milliers de propriétés, chacune cherchant à attirer l'attention des voyageurs. Les photos de qualité médiocre ou peu inspirantes peuvent rapidement faire disparaître votre propriété dans la masse. Les vidéos prises en drone peuvent aider à attirer l'attention des clients potentiels en offrant une perspective unique sur votre résidence de vacances." %}
-{% include "block/img_next_to_p.html" with left="true" p=p title=title img="img/ville.jpg" img_alt="aerial view of a town from drone" %} 
+{% with title=home.2_3_title p=home.2_3_paragraphe %}
+{% include "block/img_next_to_p.html" with left="true" p=p title=title img="img/home_2_3.jpg" img_alt="aerial view from drone" %} 
 {% endwith %}
 
-{% with title="Offrez une expérience immersive à vos clients avant leur arrivée."  p="Les vidéos prises en drone peuvent aider les clients à se sentir plus confiants dans leur choix de réservation. Les vidéos aériennes leur permettent de visualiser votre propriété avant leur arrivée, ce qui leur donne une meilleure idée de l'emplacement, des équipements et des attractions environnantes. Les clients peuvent également mieux comprendre la disposition de votre propriété et planifier leur séjour en conséquence.." %}
-{% include "block/img_next_to_p.html" with right="true" p=p title=title img="img/piscine.jpg" img_alt="aerial swimming pool of villa from drone" %} 
+{% with title=home.2_4_title  p=home.2_4_paragraphe %}
+{% include "block/img_next_to_p.html" with right="true" p=p title=title img="img/home_2_4.jpg" img_alt="aerial view from drone" %} 
 {% endwith %}
 
-<div id="map" class="vh-40"></div>
+<div id="map" lat="{% custom_json 'home.lat' %}"  lng="{% custom_json 'home.lng' %}" class="vh-40"></div>
 <div data-script="{% static 'map.js' %}" class="lazyload">
 
 <div class="text-center p-4 p-sm-5">
-        <h2> Votre gîte vu du ciel en PACA</h2>
+        <h2> {{home.3_title}} </h2>
         <div class="row">
             <div class="col-sm-4 my-3">
-                <h3>Capturer l'essence de votre gîte ou villa</h3>
+                <h3> {{home.3_1_title}} </h3>
                 <p class="p">
-                    Dans une région aussi pittoresque, il est crucial de capturer l'essence et le charme de votre gîte ou villa de la manière la plus impressionnante possible. Les vidéos et photos par drone permettent de sublimer votre propriété en offrant des vues aériennes à couper le souffle, inaccessibles par des moyens traditionnels.
+                    {{home.3_1_paragraphe}} 
                 </p>    
             </div>
             <div class="col-sm-4">
-                <h3>Une perspective unique sur votre propriété</h3>
+                <h3> {{home.3_2_title}} </h3>
                 <p class="p">
-                    Basés entre Marseille et Aix-en-Provence, nous sommes experts en vidéographie et photographie aérienne par drone. Nos services professionnels mettent en valeur les plus belles caractéristiques de votre gîte ou villa, offrant ainsi une perspective unique qui séduira à coup sûr vos potentiels locataires ou acheteurs.
+                    {{home.3_2_paragraphe}} 
                 </p>
             </div>
             <div class="col-sm-4">
-                <h3>Les paysages de la region sud sublimés par nos drones professionnels</h3>
+                <h3> {{home.3_3_title}} </h3>
                 <p class="p">
-                    La Région Sud Paca, avec ses paysages diversifiés et ses sites d'exception, est le cadre parfait pour la réalisation de vidéos et photos par drone. Les prises de vue aériennes capturées par nos drones professionnels mettent en scène votre propriété dans son contexte régional, ce qui est un véritable atout pour sa promotion. 
+                    {{home.3_3_paragraphe}} 
                 </p>
             </div>
         </div>

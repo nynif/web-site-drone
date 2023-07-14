@@ -3,66 +3,75 @@
 
 {% block content %}
 
-{% include "block/banner_inpage.html" with css_img="bg-img-home" main_title="Exemples" video='video/eglise.mp4' postername="video/poster_eglise.jpg" %}
-
-
-<!-- <div class="vh-40 container-fluid position-relative p-0"">
-    <div class="vh-40 position-absolute top-50 start-50 translate-middle zindex-10">
-        <div class="vh-40 d-flex align-items-center ">
-            <div class="text-center text-white">
-                <h1> Exemples </h1>
-            </div>
-        </div> 
-    </div>
-
-    <div class="vh-40 d-flex flex-column align-items-center vh-100 text-white zindex-1 {{css_img}}">
-        <video id="background-video" class='vh-40' autoplay loop muted>
-            <source src="{% static 'video/eglise.mp4' %}" type="video/mp4">    
-        </video>
-    </div>
-</div> -->
+{% include "block/banner_inpage.html" with css_img="bg-img-home" main_title=work.0_big_title video='video/work_0_video.mp4' postername="video/work_0_video.jpg" %}
 
 <div class="container py-sm-5">
     <div class="row">
 
-        {%for exemple in list_exemples%}
-        
-        {%if forloop.counter|divisibleby:2 %}
         <div class="col-12 p-3 py-sm-5 g-0">
             <div class="card mx-3 m-sm-3">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img data-src="{% static exemple.img %}" class="lazyload img-fluid img-cover rounded-start" alt="aerial photo of house take with dji drone">
+                        <img data-src="{% static 'img/work_1.jpg' %}" class="lazyload img-fluid img-cover rounded-start" alt="aerial photo of house take with dji drone">
                     </div>
                     <div class="col-md-6">
                         <div class="card-body position-relative top-50 start-50 translate-middle">
-                            <h2 class="text-center">{{exemple.title}}</h2>
-                            <p class="text-start card-text">{{exemple.text}}</p>
+                            <h2 class="text-center">{{work.1_title}}</h2>
+                            <p class="text-start card-text">{{work.1_description}}</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        {% else %}
-        <div class="col-12 p-3 py-sm-5 g-0">
-            <div class="card mx-3 m-sm-3">
-                <div class="row g-0">
-                    <div class="col-md-6">
-                        <div class="card-body position-relative top-50 start-50 translate-middle">
-                            <h2 class="text-center">{{exemple.title}}</h2>
-                            <p class="text-end card-text">{{exemple.text}}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img data-src="{% static exemple.img %}" class="lazyload img-fluid img-cover rounded-end" alt="aerial picture of house from drone">
                     </div>
                 </div>
             </div>
         </div>
 
-        {% endif %}
-    {% endfor %}
+        <div class="col-12 p-3 py-sm-5 g-0">
+            <div class="card mx-3 m-sm-3">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="card-body position-relative top-50 start-50 translate-middle">
+                            <h2 class="text-center">{{work.2_title}}</h2>
+                            <p class="text-end card-text">{{work.2_description}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img data-src="{% static 'img/work_2.jpg' %}" class="lazyload img-fluid img-cover rounded-end" alt="aerial picture of house from drone">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 p-3 py-sm-5 g-0">
+            <div class="card mx-3 m-sm-3">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img data-src="{% static 'img/work_3.jpg' %}" class="lazyload img-fluid img-cover rounded-start" alt="aerial photo of house take with dji drone">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body position-relative top-50 start-50 translate-middle">
+                            <h2 class="text-center">{{work.3_title}}</h2>
+                            <p class="text-start card-text">{{work.3_description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 p-3 py-sm-5 g-0">
+            <div class="card mx-3 m-sm-3">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="card-body position-relative top-50 start-50 translate-middle">
+                            <h2 class="text-center">{{work.4_title}}</h2>
+                            <p class="text-end card-text">{{work.4_description}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img data-src="{% static 'img/work_4.jpg' %}" class="lazyload img-fluid img-cover rounded-end" alt="aerial picture of house from drone">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="container text-center py-5">
