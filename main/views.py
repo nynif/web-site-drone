@@ -6,7 +6,7 @@ base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 json_file_path = os.path.join(base_dir, 'custom/custom_data.json')
 
 # Chargement du fichier JSON
-with open(json_file_path, 'r') as f:
+with open(json_file_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 # data1 = json.load(json_file_path) # deserialises it
