@@ -18,7 +18,7 @@ def work(request):
     return render(request, "main/work.html", data)
 
 def price(request):
-    return render(request, "main/price.html")
+    return render(request, "main/price.html", data)
 
 # def services(request):
 #     return render(request, "main/services.html", data)

@@ -36,7 +36,7 @@
 {% include "block/img_next_to_p.html" with right="true" p=p title=title img="img/home_2_4.jpg" img_alt="aerial view from drone" %} 
 {% endwith %}
 
-<div id="map" lat="{% custom_json 'home.lat' %}"  lng="{% custom_json 'home.lng' %}" class="vh-40"></div>
+<div id="map" zoom="{% custom_json 'home.zoom' %}"  lat="{% custom_json 'home.lat' %}"  lng="{% custom_json 'home.lng' %}" class="vh-40"></div>
 <div data-script="{% static 'map.js' %}" class="lazyload">
 
 <div class="text-center p-4 p-sm-5">
