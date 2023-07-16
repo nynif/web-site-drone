@@ -140,8 +140,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "custom/static",
 ]
 
+SASS_PRECISION = 8
 ## Django Sass
-SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
+# SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

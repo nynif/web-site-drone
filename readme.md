@@ -34,6 +34,7 @@ scp -r custom_paca root@[ip]:/var/www/web-site-drone-paca/custom
 ```
 
 ```
+python manage.py compilescss
 python manage.py collectstatic
 python manage.py migrate
 ```
@@ -45,3 +46,10 @@ systemctl reload apache2
 
 # Ajouter le DNS
 Type A
+
+# Certiticat ssl
+on utilise certbot pour generer les certificats ssl
+directement sur le serveur :
+```
+sudo certbot certonly --manual --preferred-challenges=dns --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d *.drone-photovideo.fr
+```

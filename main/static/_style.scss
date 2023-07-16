@@ -79,16 +79,22 @@ h3{
 .vh-40{
   height: 40vh !important;
   overflow: hidden;
+  width: 100vw !important;
+  justify-content: center;
 }
 
 .vh-coverfull{
   height: 100vh !important;
   overflow: hidden;
+  width: 100vw !important;
+  justify-content: center;
 }
 
 .vh-50{
     height: 50vh !important;
     overflow: hidden;
+    width: 100vw !important;
+    justify-content: center;
 }
 
 .start-25{
