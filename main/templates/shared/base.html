@@ -37,17 +37,17 @@
     <meta name="description" content="{% custom_json 'settings.meta_description' %}" />
 
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Raleway">  
-    <link rel="canonical" href="https://drone-photovideo.fr" />
-    <link rel="alternate" href="https://drone-photovideo.fr" hreflang="fr" />
+    <link rel="canonical" href="https://{% custom_json 'settings.url' %}.fr" />
+    <link rel="alternate" href="https://{% custom_json 'settings.url' %}.fr" hreflang="fr" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
         "@type": "Product",
         "name": "Vidéo drone",
         "image": [
-          "https://drone-photovideo.fr/static/img/villa.jpg",
-          "https://drone-photovideo.fr/static/img/piscine.jpg",
-          "https://drone-photovideo.fr/static/img/ex_villa.jpg"
+          "https://{% custom_json 'settings.url' %}.fr/static/img/work_1.jpg",
+          "https://{% custom_json 'settings.url' %}.fr/static/img/work_2.jpg",
+          "https://{% custom_json 'settings.url' %}.fr/static/img/work_3.jpg"
          ],
         "description": "Vidéo de 30 secondes",
         "brand": {
@@ -73,7 +73,7 @@
         },
         "offers": {
           "@type": "Offer",
-          "url": "https://drone-photovideo.fr/tarifs/",
+          "url": "https://{% custom_json 'settings.url' %}.fr/tarifs/",
           "priceCurrency": "EUR",
           "price": 390,
           "priceValidUntil": "2023-07-01",

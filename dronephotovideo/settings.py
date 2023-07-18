@@ -136,8 +136,11 @@ STATICFILES_FINDERS = [
     'sass_processor.finders.CssFinder',
 ]
 
+
+static_path = env.str("CUSTOMLINK", "custom") + '/static'
+
 STATICFILES_DIRS = [
-    BASE_DIR / "custom/static",
+    BASE_DIR / static_path,
 ]
 
 SASS_PRECISION = 8

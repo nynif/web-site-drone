@@ -14,7 +14,7 @@ Exemple pour le sous domaine paca
 Recuperer le projet en `ssl`
 ```
 cd /var/www
-https://github.com/nynif/web-site-drone.git
+git clone https://github.com/nynif/web-site-drone.git
 mv web-site-drone web-site-drone-paca
 cd web-site-drone-paca
 ```

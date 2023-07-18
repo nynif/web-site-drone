@@ -1,9 +1,16 @@
 from django.shortcuts import render
 import json
 import os
+import environ
+
+env = environ.Env()
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-json_file_path = os.path.join(base_dir, 'custom/custom_data.json')
+
+json_path =  env.str("CUSTOMLINK", "custom") + '/custom_data.json'
+json_file_path = os.path.join(base_dir,json_path)
+
+# json_file_path = os.path.join(base_dir, 'custom/custom_bretagne/custom_data.json')
 
 # Chargement du fichier JSON
 with open(json_file_path, 'r', encoding='utf-8') as f:
